@@ -1,11 +1,10 @@
 package com.vn.LaptopShop.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+
 
 import com.vn.LaptopShop.service.UserService;
 
-@RestController
+@Controller
 public class UserController {
     private UserService userService;
 
@@ -13,8 +12,8 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("")
+    @RequestMapping("")
     public String getHomePage() {
-        return userService.userHelloService();
+        return "helloWorld.html";
     }
 }
